@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  integration-test:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Reproduce
+      run: curl --fail https://getfedora.org/static/fedora.gpg
